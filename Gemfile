@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
-gem 'rubygems'
+gem 'muni'
 gem 'builder'
