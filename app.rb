@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'sinatra'
-require 'muni'
 require 'builder'
 
 get '/' do
