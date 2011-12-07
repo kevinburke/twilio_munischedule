@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'builder'
 
-get '/' do
+post '/' do
   builder do |xml|
     xml.instruct!
     xml.Response do 
