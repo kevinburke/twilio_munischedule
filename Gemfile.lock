@@ -24,6 +24,9 @@ GEM
     erubis (2.7.0)
     hike (1.2.1)
     i18n (0.6.0)
+    json (1.6.2)
+    jwt (0.1.4)
+      json (>= 1.2.4)
     mash (0.1.1)
     multi_json (1.0.4)
     muni (0.0.2)
@@ -52,12 +55,16 @@ GEM
     thor (0.14.6)
     tilt (1.3.3)
     tins (0.3.3)
+    twilio-ruby (3.4.2)
+      builder (>= 2.1.2)
+      jwt (>= 0.1.2)
+      multi_json (>= 1.0.3)
     xml-simple (1.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  builder
   muni
   sinatra
+  twilio-ruby
