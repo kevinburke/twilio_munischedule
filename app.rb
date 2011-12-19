@@ -5,7 +5,7 @@ require 'twilio-ruby'
 get '/' do
   response = Twilio::TwiML::Response.new do |r|
     r.Gather :action => "input", :numDigits => 1 do
-      r.Say "Hello Andrew, are headed to Twilio, or headed home,"
+      r.Say "Hello Andrew, are you headed to Twilio, or headed home,"
       r.Say "Press 1 for Twilio,"
       r.Say "Press 2 for home"
     end
