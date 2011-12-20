@@ -9,8 +9,8 @@ require 'twilio-ruby'
 @account = @client.account 
 
 get '/' do  
-  r.Sms "Hi There"
   response = Twilio::TwiML::Response.new do |r|
+    r.Sms "Hi There"
     r.Gather :action => "input", :numDigits => 1 do
       r.Say "Hello Andrew, are you headed to Twilio, or headed home,"
       r.Say "Press 1 for Twilio,"
