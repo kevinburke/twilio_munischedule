@@ -2,7 +2,14 @@ require 'sinatra'
 require 'muni'
 require 'twilio-ruby'
 
-get '/' do
+@account_sid = ENV['SID'] || 'AC25e16e9a716a4a1786a7c83f58e30482'
+@auth_token = ENV['TOKEN'] || '3d89bd57e2127b438889c6ecc78d3195'
+# set up a client, without any http requests
+@client = Twilio::REST::Client.new(@account_sid, @auth_token)
+@account = @client.account 
+
+get '/' do  
+  r.Sms "Hi There"
   response = Twilio::TwiML::Response.new do |r|
     r.Gather :action => "input", :numDigits => 1 do
       r.Say "Hello Andrew, are you headed to Twilio, or headed home,"
