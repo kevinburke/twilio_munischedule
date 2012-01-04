@@ -8,9 +8,13 @@ require 'twilio-ruby'
 @client = Twilio::REST::Client.new(@account_sid, @auth_token)
 @account = @client.account 
 
-get '/' do  
+get '/' do
+  # if body == 1
+  # response = Twilio::TwiML::Response.new do |r|
+  #   r.Sms "text"
+  #   end
+  # else  
   response = Twilio::TwiML::Response.new do |r|
-    r.Sms "Hi There"
     r.Gather :action => "input", :numDigits => 1 do
       r.Say "Hello Andrew, are you headed to Twilio, or headed home,"
       r.Say "Press 1 for Twilio,"
