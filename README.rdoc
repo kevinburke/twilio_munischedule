@@ -1,1 +1,3 @@
-A app to demo Twilio functionality, with some bus time predictions mixed in.
+A bus time prediction by phone app written to demo Twilio functionality.
+
+The app uses Twilio to generate a phone menu and deliver bus predictions.
