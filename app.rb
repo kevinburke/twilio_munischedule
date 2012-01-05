@@ -3,7 +3,7 @@ require 'muni'
 require 'twilio-ruby'
 
 @account_sid = ENV['SID'] || 'AC25e16e9a716a4a1786a7c83f58e30482'
-@auth_token = ENV['TOKEN'] || '3d89bd57e2127b438889c6ecc78d3195'
+@auth_token = ENV['TOKEN'] || ''
 # set up a client, without any http requests
 @client = Twilio::REST::Client.new(@account_sid, @auth_token)
 @account = @client.account 
